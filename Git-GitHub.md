@@ -81,7 +81,7 @@ A veces, **GitHub** se le considera como una red social de código para los prog
 - `clear` : para limpiar pantalla o **Ctrl + L** .
 
 # Conceptos importantes de Git
-* **Staging** :asdas
+* **Staging** :recordar agregar definición
 
 - **Bug**: Error en el código.
 - **Repository**: Es donde se almacena todo el proyecto, el cual puede vivir tanto en local como en remoto. El repositorio guarda un historial de versiones y, más importante, de la relación de cada versión con la anterior para que pueda hacerse un árbol de versiones con las diferentes ramas.
