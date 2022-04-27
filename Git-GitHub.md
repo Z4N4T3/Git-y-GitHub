@@ -1,5 +1,5 @@
 # Sistema de control de versiones
-esto es una prueba.
+
 ## ¿Que es un sistema de control de versiones?
 
 Un sistema de control de versiones nos ayuda a guardar el historial de cambios y crecimiento de los archivos de nuestro proyecto.
