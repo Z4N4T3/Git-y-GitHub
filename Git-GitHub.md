@@ -197,3 +197,30 @@ Al crear una nueva rama se copia el último **commit** en esta nueva rama. Todos
 * `git merge <branch_name>` : Fusiona la rama actual con la rama especificada y produce un nuevo **commit** de esta fusión 
 * `git branch` : lista las ramas generadas
 
+
+# Los tres estados 
+
+Un asunto importante a recordard acerca de **Git**, es de que **Git** tiene tres estados principales en el cual tus archivos pueden residir: **modiffied**, **staged**, y **committed**:
+
+- **Modified**: Significa que el archivo lo has modificado perono se le ha hecho **commited** aún en la base de datos.
+
+- **Staged**: Significa que se ha marcado un archivo modificado en su version actual para ir al próximo **commit**.
+
+- **Commited**: significa que los datos estan almacenados de forma segura en la base de datos local.
+
+
+![](https://git-scm.com/book/en/v2/images/areas.png)
+
+## Working tree, Staging area Git directory
+
+**Working tree**: Es una sola verificacion de la version del proyecto. Estos archivos son jalados(*pulled*) fuera de la base de datos comprimida en el repositorio de *Git* y colocado en el disco para ser utilizados o ser modificados.
+
+**Staging area**: Es un archivo, por lo general contenido en tu repositorio Git, el cual almacena la información que va a ir a tu próximo **commit**. Su nombre técnico es "*index*".
+
+**Git directory(repository)**: es donde **Git** guarda los metadatos y objetos de la base de datos para tu proyecto. Esta es la parte mas importante de **Git**, y también es lo que es copiado cuando clonas(*clone*) un repositorio de otra computadora.
+
+El flujo de trabajo de Git por lo general es asi:
+
+1. Modificas los archivos de tu árbol de trabajo(*working tree*).
+2. Seleccionas aquellos cambios que queres que sean parte de tu próximo **commit**, el cual agrega solo aquellos cambios al **staging area**.
+3. Haces un **commit**, que toma los archivos así como estan en el *staging area* y almacena esa snapshot permanentemente  al tu repositorio de git ("git repository"). 
