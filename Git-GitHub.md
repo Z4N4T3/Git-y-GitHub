@@ -225,4 +225,4 @@ El flujo de trabajo de Git por lo general es asi:
 
 2. Seleccionas aquellos cambios que queres que sean parte de tu próximo **commit**, el cual agrega solo aquellos cambios al **staging area**.
 
-3. Haces un **commit**, que toma los archivos así como estan en el *staging area* y almacena esa snapshot permanentemente  al tu repositorio de git ("git repository"). 
+3. Haces un **commit**, que toma los archivos así como estan en el *staging area* y almacena esa snapshot permanentemente  al tu repositorio de git ("*git repository*"). 
