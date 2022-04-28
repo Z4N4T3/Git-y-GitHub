@@ -46,7 +46,7 @@ Guardar archivos binarios en el repositorio de git es una mala práctica, única
 ![GitHub Logo](https://global-uploads.webflow.com/5f5a53e153805db840dae2db/6073fbf151fa4565d48572dc_GitHub_aprender-programaci%25C3%25B3n.jpeg)
 **GitHub** es una plataforma de desarrollo colaborativo para alojar proyectos utilizando el sistema de control de versiones **git**. Se emplea principalmente para la creación de código fuente de programas de computadora.
 
-A veces, **GitHub** se le considera como una red social de código para los programadores y en muchos casos es visto como un tu CV, pies aqui guardas tu portafolio de proyectos de programación.
+A veces, **GitHub** se le considera como una red social de código para los programadores y en muchos casos es visto como un tu CV, pues aqui guardas tu portafolio de proyectos de programación.
 
 # Algunos comandos básicos de la terminal Linux basadas en debian
 
@@ -60,7 +60,7 @@ A veces, **GitHub** se le considera como una red social de código para los prog
 
 - `cd ..` : regresa una carpeta hacia atrás. si queres dirigirte al directorio en el que te encontras basta con solo un punto (`cd .`).
 
-- `mmkdir` : Nos permite crear carpetas (por ejemplo: `mkdir Carpeta-importante`).
+- `mkdir` : Nos permite crear carpetas (por ejemplo: `mkdir Carpeta-importante`).
 
 - `touch` : crear archivos (`touch archivo.txt`)
 
@@ -81,19 +81,19 @@ A veces, **GitHub** se le considera como una red social de código para los prog
 - `clear` : para limpiar pantalla o **Ctrl + L** .
 
 # Conceptos importantes de Git
-* **Staging** : Es un area de intermedio, también se le llama **cache index**, el cual contiene los próximos commits propuestos. 
+* **Staging** : Es un area de intermedio, también se le llama **cache-index**, el cual contiene los próximos commits propuestos. 
 
 - **Bug**: Error en el código.
-- **Repository**: Es donde se almacena todo el proyecto, el cual puede vivir tanto en local como en remoto. El repositorio guarda un historial de versiones y, más importante, de la relación de cada versión con la anterior para que pueda hacerse un árbol de versiones con las diferentes ramas.
-- **Fork**: Si en algún momento queremos contribuir al proyecto de otra persona o si queremos utilizar el proyecto de otro como el punto de partida del nuestro. Esto se conoce como "Fork".
+- **Repository**: Es dónde se almacena todo el proyecto, el cual puede vivir tanto en local como en remoto. El repositorio guarda un historial de versiones y, más importante, de la relación de cada versión con la anterior para que pueda hacerse un árbol de versiones con las diferentes ramas.
+- **Fork**: Si en algún momento queremos contribuir al proyecto de otra persona o si queremos utilizar el proyecto de otro como el punto de partida del nuestro. Esto se conoce como "*Fork*".
 
 - **clone**: Una vez se decide hacer un **fork**, hasta ese momento sole existe en **GitHub**. Para poder trabajar en el proyecto, toca colar el repositorio elegido al computador personal.
 
 - **branch**: Es una bifurcación del proyecto que se está realizando para anexar una nueva funcionalidad o corregir un **bug**.
-- **master**: rama donde se almacena la ultima versión estable del proyecto que se está realizando. la rama **master** es la que se está en producción en cada momento(o casi) y devería de estar libre de **bugs**. Así. si esta rama está en producción, sirve como referente para hacer nuevas funcionalidades y/o arreglar bugs de última hora.
+- **master**: rama donde se almacena la ultima versión estable del proyecto que se está realizando. la rama **master** es la que se está en producción en cada momento(o casi) y debería de estar libre de **bugs**. Así, si esta rama está en producción, sirve como referente para hacer nuevas funcionalidades y/o arreglar bugs de última hora (*hot-fixes*).
 - **commit**: Consiste en subir cosas a la versión local del repositorio. De esta manera se puede trabajar en la rama local sin tener que modificar ninguna versión en remoto ni tener que tener la última version remota, cosa muy útil en grandes desarrollos trabajados por varias personas.
 
-- **push** : Consiste en enciar todo lo que se ha confirmado con un **commit** al repositorio remoto. Aqui es donde se une nuestro trabajo con el de los demás.
+- **push** : Consiste en enviar todo lo que se ha confirmado con un **commit** al repositorio remoto. Aquí es donde se une nuestro trabajo con el de los demás.
 
 - **checkout** : Acción de descargarse una rama del repositorio **GIT** local (si, git tiene su propio repositorio en local para poder ir haciendo **commits**) o remoto.
 - **fetch** : Actualiza el repositorio local bajando datos del repositorio remoto al repositorio local sin actualizarlo, es decir, se guarda una copia del repositorio remoto en local.
@@ -164,7 +164,7 @@ configura un nombre
 
 ## Volver al tiempo con branches y checkout
 
-`git reset <coomit>--soft/hard` : regresa al commit especificado, eliminado todos los cambios que se hicieron después de ese commit.
+`git reset <commit>--soft/hard` : regresa al commit especificado, eliminado todos los cambios que se hicieron después de ese commit.
 
 `git checkout <commit/branch><filename>`: Permite regresar al estado en el cual se realizó un commit o branch especificado, pero no elimina lo que está en el *staging area*.
 
@@ -202,7 +202,7 @@ Al crear una nueva rama se copia el último **commit** en esta nueva rama. Todos
 
 Un asunto importante a recordard acerca de **Git**, es de que **Git** tiene tres estados principales en el cual tus archivos pueden residir: **modiffied**, **staged**, y **committed**:
 
-- **Modified**: Significa que el archivo lo has modificado perono se le ha hecho **commited** aún en la base de datos.
+- **Modiffied**: Significa que el archivo lo has modificado perono se le ha hecho **commited** aún en la base de datos.
 
 - **Staged**: Significa que se ha marcado un archivo modificado en su version actual para ir al próximo **commit**.
 
@@ -222,5 +222,7 @@ Un asunto importante a recordard acerca de **Git**, es de que **Git** tiene tres
 El flujo de trabajo de Git por lo general es asi:
 
 1. Modificas los archivos de tu árbol de trabajo(*working tree*).
+
 2. Seleccionas aquellos cambios que queres que sean parte de tu próximo **commit**, el cual agrega solo aquellos cambios al **staging area**.
+
 3. Haces un **commit**, que toma los archivos así como estan en el *staging area* y almacena esa snapshot permanentemente  al tu repositorio de git ("git repository"). 
