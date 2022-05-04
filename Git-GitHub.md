@@ -276,5 +276,25 @@ Existe un comando llamado `git pull`, el cual lo que hace es `git fetch` seguido
 
 
 
+# Ramas o branches de Git
+
+![branches](./img/branches.png)
+Las ramas son la forma de hacer cambios en nuestro proyecto sin afectar el flojo de trabajo de la rama principal. Esto porque queremos trabajar una parte muy específica de la aplicación o simplemente experimentar.
+
+La cabecera o `HEAD` representa la rama y el commit de esa rama donde estamos trabajando. Por defecto, esta cabecera aparecerá en el último commit de nuestra rama principal. Pero podemos cambiarlo al crear una rama.
+
+```bash
+git branch <branch-name>
+git checkout -b <branch-name>
+```
+o movernos en el timepo a cualquier otro commit de cualquier otra rama con los comandos:
+
+``` bash
+git reset <id-commit>
+git checkout <rama o id-commit>
+```
+
+
+
 
 
