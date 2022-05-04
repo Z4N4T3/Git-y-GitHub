@@ -16,7 +16,7 @@ En realidad, los cambios y diferencias entre las versiones de nuestros proyectos
 
 
 # Git
-```
+``` bash
 sudo apt update
 sudo apt-get upgrade
 sudo apt-get install git
@@ -261,6 +261,19 @@ luego que un **commit** se ha realizado, se debe de ejecutar este comando para m
 ``` bash
 git fetch 
 ```
+![fetch](./img/fetch.png)
+
+Se usa para traer actualizaciones del servidor remoto y guardarlas en nuestro repositorio local. Pero este no modifica a los archivos los archivo de nuestro directorio de trabajo, simplemente actualiza las referencias de tu remoto. 
+
+Para lograr fusionar las actualizaciones del repositorio remoto con nuestro directorio local se utiliza un `git merge`.
+![merge](./img/fetch-merge.png)
+``` bash
+git merge
+```
+Existe un comando llamado `git pull`, el cual lo que hace es `git fetch` seguido por `git merge` en la mayoria de los casos.
+
+![pull](./img/pull.png)
+
 
 
 
