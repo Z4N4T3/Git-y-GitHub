@@ -238,6 +238,8 @@ Para solucionar esto, utilizamos los **servidores remotos**: Un nuevo estado que
 Estos servidores remotos pueden estar alojados en **GitHub**, **GitLab**, **BitBucket**, entre otros. Lo que estos servidores hacen es guardar el mismo repositorio que está en nuestra computadora y darnos una **URL** con la que todos podremos acceder a los archivos del proyecto. Así de esta forma el equipo podrá descargarlo, hacer cambios y volverlos a enviar al servidor remoto para que otras personas vean los cambios, comparen sus versiones y creen nuevas propuestas para el proyecto.
 
 ## Comandos para trabajo remoto con GIT.
+![](./img/remote.png)
+
 ``` bash
 git clone [url]
 ```
@@ -246,5 +248,20 @@ Cuando queremos traer datos de un servidor remoto y empezar a contribuir en el, 
 ![clone](./img/git-clone.png)
 
 En este caso, cada versión de cada archivo de la historia es descargada por defecto cuando se ejecuta el comando.
+
+
+
+``` bash
+git push 
+```
+luego que un **commit** se ha realizado, se debe de ejecutar este comando para mandar los cambios al servidor remoto.
+
+![push](./img/git-push.png)
+
+``` bash
+git fetch 
+```
+
+
 
 
