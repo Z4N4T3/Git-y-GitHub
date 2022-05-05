@@ -279,6 +279,7 @@ Existe un comando llamado `git pull`, el cual lo que hace es `git fetch` seguido
 # Ramas o branches de Git
 
 ![branches](./img/branches.png)
+
 Las ramas son la forma de hacer cambios en nuestro proyecto sin afectar el flojo de trabajo de la rama principal. Esto porque queremos trabajar una parte muy específica de la aplicación o simplemente experimentar.
 
 La cabecera o `HEAD` representa la rama y el commit de esa rama donde estamos trabajando. Por defecto, esta cabecera aparecerá en el último commit de nuestra rama principal. Pero podemos cambiarlo al crear una rama.
@@ -293,6 +294,48 @@ o movernos en el timepo a cualquier otro commit de cualquier otra rama con los c
 git reset <id-commit>
 git checkout <rama o id-commit>
 ```
+
+## IMPORTANTE
+Cuando se quiere hacer un merge, la fusion siempre ocurre desde la rama acutal, para ello debes asegurarte de lo siguiente:  
+* primero cual será la rama de recepción del merge y luego ubicarte en ella (`checkout`). 
+
+* También debes asegurarte de que la rama de recepción y de fusión esten actualizadas con los cambios mas recientes. 
+
+* Una vez adoptados estos pasos se puede ejecutar la fusión de las ramas con el comando 
+```bash
+git merge <Branch-Name>
+```
+
+
+# Resolución de conflictos al hacer merge
+
+hay que recordar que **git** nunca borra nada, a menos que nosotros se lo indiquemos. Cuando se usan los comandos `git merge` o `git checkout` estamos cambiando de rama o creando un nuevo commit, no borrando ramas ni commits 
+Para borrar commits es:
+
+`
+git reset --soft/hard <id-commit>
+`
+
+y para las ramas es:
+
+`git branch -d <branch-name>`
+
+Un **conflicto** ocurre cuando dos ramas diferentes hacen cambios distintos a una misma linea. Lo que toca hacer es resolverlo manualmente. Solo se debe hacer el *merge*, e ir a nuestro editor de código y decidir con cual versión deseamos quedarnos.
+
+Siempre debemos de recordar crear un nuevo commit para aplicar los cambios del *merge*. A veces **git** hace commit automaticamente, pero en otros casos no ocurre lo mismo y debemos de solucionarlo haciendo el *commit*.
+
+## Revertir un merge
+
+```bash
+git merge --abort
+```
+
+
+
+
+# GitHub
+
+
 
 
 
