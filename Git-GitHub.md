@@ -330,14 +330,60 @@ Siempre debemos de recordar crear un nuevo commit para aplicar los cambios del *
 git merge --abort
 ```
 
-
-
-
 # GitHub
 
+## Conectar un repositorio de GitHub a nuestro documento local
+
+Si queremos conectar el repositorio de GitHub con nuestro repositorio local, que ha sido creado con el `git init`, debemos de ejecutar las siguientes instrucciones.
 
 
+* se guarda la URL del repositorio de *GitHub* con el nombre de "*origin*"
+
+```bash
+git remote add origin [URL]
+
+```
+
+* verificamos que la URL se haya guardado correctamente.
+```bash
+git remote
+git remote -v
+```
+
+* Nos traemos la versión del repositorio remoto y hacer un **merge** para crear un **commit** con los archivos de ambas partes.
+
+```bash
+git fetch <repository>
+git merge <origin>
+```
+o simnplemente hacemos *pull*
+```bash
+git pull origin master --allow-unrelated-hisotries
+```
+*"--allow-unrelated-hisotries"* es un tag que se utiliza en caso de que ya existan archivos o cambios en el repositorio al que se le quiere hacer *pull*.
+
+- para guardar los cambios de nuestro repositorio local a GitHub procedemos a hacer un *push*
+```bash
+git push origin master 
+```
+# Generar llaves SSH en local
 
 
+1. **Generar la llave SSH**
+Se recomienda agregar una contraseña a la llave privada para protegerla.
 
+```bash
+ssh-keygen -t rsa -b 4096 -C "Myemail@email.com"
+```
+2. Terminar de configurar el entorno
+- se procede a encender el "servidor" de llaves SSH de tu computadora.
+
+```
+eval $(ssh-agent -s)
+```
+- añadir la llave SSH al servidor
+```
+ssh-add </la-ruta-donde-la-llave-esta-alojada>
+```
+muerto
 
